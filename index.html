@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="description" content="Professional media production services including video, audio, and multimedia solutions to help businesses create high-quality visual content.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional media production services including video, audio, and multimedia solutions.">
     <meta name="author" content="Phetso Donald">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Media Production</title>
-    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Media Production Company</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>Media Production Company</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="media.html">Media</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>   
-        </nav>
-    </header>
-    <main>
-        <section class="hero-section">
+
+<header>
+    <h1>Media Production</h1>
+
+    <!-- Hamburger Toggle -->
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>   
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero-section">
+        <article>
             <h2>Professional Media Production Services</h2>
             <p>We create stunning visual content for your business needs.</p>
-        </section>
+            <a href="#services" class="cta-btn">Explore Services</a>
+        </article>  
+    </section>
 
-        <section class="content-section">
-            <h2>What We Do</h2>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Video Production</h3>
-                    <p>High-quality video content for marketing and branding.</p>
-                </div>
+    <section class="content-section" id="services">
+        <h2>What We Do</h2>
 
-                <div class="card">
-                    <h3>Audio Recording</h3>
-                    <p>Professional audio services for podcasts and media.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Multimedia Solutions</h3>
-                    <p>Creative solutions to enhance your business presence.</p>
-                </div>
+        <div class="card-container">
+            <div class="card">
+                <h3>Video Production</h3>
+                <p>High-quality video content for marketing and branding.</p>
             </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>Email: contact@mediaproduction.com</p>
-        <p>Phone: 555-0123</p>
-    </footer>
+
+            <div class="card">
+                <h3>Audio Recording</h3>
+                <p>Professional audio services for podcasts and media.</p>
+            </div>
+
+            <div class="card">
+                <h3>Multimedia Solutions</h3>
+                <p>Creative solutions to enhance your business presence.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Email: contact@mediaproduction.com</p>
+    <p>Phone: 555-0123</p>
+</footer>
+
 </body>
 </html>

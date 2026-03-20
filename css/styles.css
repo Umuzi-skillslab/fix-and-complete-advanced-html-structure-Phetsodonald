@@ -1,85 +1,234 @@
-/* Basic styles with multiple errors and missing features */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-body {
-    font-family: Arial;
-    margin: 0;
-    padding: 0;
-    color: #333;
+:root{
+    --primary: #f3f4f5;
+    --secondary: #d4d9df;
+    --accent: #1f9bb0;
+    --accent-hover: #0f7c8f;
+    --text: #0f172a;
+    --card: #ffffff;
+    --overlay: rgba(12,12,12,0.7);
+
+    --font-family: 'Poppins', sans-serif;
+    --padding: 10px;
+    --radius: 10px;
+    --gap: 15px;
 }
 
-.top {
-    background-color: #1a1a1a;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 10vh;
+    background: url('../images/header-bg.jpg') bottom/cover no-repeat;
+    padding: var(--padding);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ================= NAV ================= */
+nav ul {
+    display: flex;
+    gap: var(--gap);
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
     color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* ================= HERO ================= */
+.hero-section {
+    height: 60vh;
+    background: url("../images/hero-image.jpg") center/cover no-repeat;
+}
+
+.hero-section article {
+    height: 100%;
+    width: 100%;
+    background: var(--overlay);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
     padding: 20px;
 }
 
-.top h1 {
-    margin: 0;
+.hero-section h2 {
+    font-size: 2.5rem;
+    animation: fadeInDown 1s ease;
 }
 
-/* Navigation - not using flexbox, poor styling */
-.nav {
+.hero-section p {
     margin-top: 10px;
+    opacity: 0.9;
+    animation: fadeInUp 1.2s ease;
 }
 
-.nav a {
+/* ================= CTA ================= */
+.cta-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--accent);
     color: white;
-    margin-right: 15px;
+    border-radius: var(--radius);
     text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Missing: pseudo-classes for hover effects */
-/* Missing: combination selectors */
-/* Missing: advanced selector types (attribute, child, etc) */
-
-.hero {
-    padding: 60px 20px;
-    background-color: lightgray;
-    /* Poor colour contrast */
-    color: #ddd;
+.cta-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
-/* Missing: flexbox layouts (requirement: 2+ flexbox layouts) */
-/* Missing: CSS Grid layout (requirement: 1+ grid layout) */
-
-.content {
+/* ================= CONTENT ================= */
+.content-section {
     padding: 40px 20px;
 }
 
-/* Missing: text effects (shadows, gradients) */
-/* Missing: transforms */
-/* Missing: transitions */
-/* Missing: keyframe animations */
-
-img {
-    max-width: 100%;
+.content-section h2 {
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
-/* Video and audio styling missing */
-
-/* Form styling incomplete */
-form input {
-    display: block;
-    margin: 10px 0;
-    padding: 5px;
+/* ================= CARDS (GRID) ================= */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--gap);
 }
 
-form button {
-    padding: 10px 20px;
-    background-color: blue;
-    color: white;
-    border: none;
-}
-
-.bottom {
-    background-color: #333;
-    color: white;
+.card {
+    background-color: var(--card);
     padding: 20px;
-    text-align: center;
+    border-radius: var(--radius);
+    transition: 0.3s;
 }
 
-/* Missing: responsive design with media queries */
-/* Missing: advanced layout techniques */
-/* Code quality issues: poor naming, no comments, inconsistent spacing */
-/* Only using 3 selector types (element, class) - needs 5+ */
-/* No pseudo-classes used - needs 5+ */
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+    border: 1px solid var(--accent);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--secondary);
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media(min-width:768px){
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+/* ================= HAMBURGER ================= */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= MEDIA ================= */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        backdrop-filter: blur(30px);
+        transform: translateY(-1000%);
+        transition: transform 0.3s ease;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #menu-toggle:checked ~ nav {
+        transform: translateY(0);
+    }
+
+    .hero-section {
+        height: 50vh;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .hero-section{
+        height: 70vh;
+    }
+}
