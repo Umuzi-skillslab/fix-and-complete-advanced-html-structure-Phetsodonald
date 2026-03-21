@@ -1,57 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="description" content="">
+    <meta name="description" content="Professional media production services including video, audio, and multimedia solutions.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="author" content="Phetso Donald">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="refresh" content="5">
+
     <title>Media Gallery</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
-        <h1>Media Gallery</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="media.html">Media</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div>
-        <h2>Video Showcase</h2>
+
+    <header>
+        <h1>Media Production</h1>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>   
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Video Showcase</h2>
+
+            <video width="640" height="360" controls>
+                <source src="media/sample1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <video width="640" height="360" controls>
+                <source src="media/sample2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section>
+            <h2>Audio Sample</h2>
+            <p>Listen to our audio production quality.</p>
+
+            <audio controls>
+                <source src="media/sample-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section>
+            <h2>Location</h2>
+            <p>Visit our studio at 123 Media Street</p>
+
+            <iframe 
+                src="https://www.google.com/maps?q=pretoria&output=embed"
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </section>
+
         
-        <!-- First video - missing controls and fallback -->
-        <video src="media/sample1.mp4" width="640" height="360"></video>
-        
-        <!-- Second video missing entirely -->
-    </div>
-    
-    <div>
-        <h2>Audio Sample</h2>
-        <!-- Audio element missing completely -->
-        <p>Listen to our audio production quality.</p>
-    </div>
-    
-    <div>
-        <h2>Location</h2>
-        <!-- iframe missing completely -->
-        <p>Visit our studio at 123 Media Street</p>
-    </div>
-    
-    <div>
-        <h2>Client Testimonials</h2>
-        <img src="images/client1.jpg">
-        <img src="images/client2.jpg">
-        <!-- Missing figure/figcaption semantic markup -->
-    </div>
-    
-    <div class="bottom">
+        <section>
+            <h2>Client Testimonials</h2>
+
+            <figure>
+                <img src="images/client1.jpg" alt="Happy client testimonial">
+                <figcaption>Client 1: Amazing production quality!</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/client2.jpg" alt="Satisfied client testimonial">
+                <figcaption>Client 2: Highly professional team.</figcaption>
+            </figure>
+
+        </section>
+
+    </main>
+
+    <footer>
         <p>Email: contact@mediaproduction.com</p>
-    </div>
+    </footer>
+
 </body>
 </html>
