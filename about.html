@@ -1,49 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta name="description" content="Professional media production services including video, audio, and multimedia solutions.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Phetso Donald">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="top">
-        <h1>About Our Services</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="media.html">Media</a>
-            <a href="contact.html">Contact</a>
-        </div>
+    <header>
+        <h1>Media Production</h1>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <div class="about-team-section">
+        <article>
+            <h2>Our Team</h2>
+            <p>We are a team of experienced media professionals dedicated to creating high-quality content.</p>
+            <a href="#services" class="cta-btn">Explore Services</a>
+        </article>
     </div>
-    
-    <div>
-        <h2>Our Team</h2>
-        <p>We are a team of experienced media professionals dedicated to creating high-quality content.</p>
-    </div>
-    
-    <div>
+
+    <section class="services-section" id="services">
         <h2>Services</h2>
-        <!-- Flexbox layout should be here but using basic divs -->
-        <div>
-            <h3>Video Production</h3>
-            <p>Professional video creation for corporate and creative projects.</p>
+        <div class="services-container">
+            <div class="card">
+                <h3>Video Production</h3>
+                <p>Professional video creation for corporate and creative projects.</p>
+            </div>
+            <div class="card">
+                <h3>Audio Recording</h3>
+                <p>Studio-quality audio production and editing services.</p>
+            </div>
+            <div class="card">
+                <h3>Photography</h3>
+                <p>High-resolution photography for events, products, and campaigns.</p>
+            </div>
         </div>
-        <div>
-            <h3>Audio Recording</h3>
-            <p>Studio-quality audio production and editing services.</p>
-        </div>
-        <!-- Missing third service -->
-    </div>
-    
-    <div>
+    </section>
+
+    <section class="portfolio-section">
         <h2>Portfolio</h2>
-        <!-- Grid gallery missing - just basic layout -->
-        <img src="images/work1.jpg">
-        <img src="images/work2.jpg">
-        <img src="images/work3.jpg">
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+        <div class="portfolio">
+            <figure>
+                <img src="./images/corparate-video-image.webp" alt="Corporate video shoot project">
+                <figcaption>Corporate Video</figcaption>
+            </figure>
+
+            <figure>
+                <img src="./images/studio-recording-image.jpg" alt="Audio recording session">
+                <figcaption>Studio Recording</figcaption>
+            </figure>
+
+            <figure>
+                <img src="./images/photography-campaign-image.jpg" alt="Photography campaign shoot">
+                <figcaption>Photography Campaign</figcaption>
+            </figure>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Email: contact@mediaproduction.com</p>
+</footer>
 </body>
 </html>
