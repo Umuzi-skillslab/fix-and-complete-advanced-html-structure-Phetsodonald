@@ -5,52 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="author" content="Phetso Donald">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="refresh" content="5">
     <title>About Us</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="top">
+    <header>
         <h1>About Our Services</h1>
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="media.html">Media</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <section>
         <h2>Our Team</h2>
         <p>We are a team of experienced media professionals dedicated to creating high-quality content.</p>
-    </div>
-    
-    <div>
+    </section>
+
+    <section>
         <h2>Services</h2>
-        <!-- Flexbox layout should be here but using basic divs -->
-        <div>
-            <h3>Video Production</h3>
-            <p>Professional video creation for corporate and creative projects.</p>
+        <div class="services">
+            <div>
+                <h3>Video Production</h3>
+                <p>Professional video creation for corporate and creative projects.</p>
+            </div>
+            <div>
+                <h3>Audio Recording</h3>
+                <p>Studio-quality audio production and editing services.</p>
+            </div>
+            <div>
+                <h3>Photography</h3>
+                <p>High-resolution photography for events, products, and campaigns.</p>
+            </div>
         </div>
-        <div>
-            <h3>Audio Recording</h3>
-            <p>Studio-quality audio production and editing services.</p>
-        </div>
-        <!-- Missing third service -->
-    </div>
-    
-    <div>
+    </section>
+
+    <section>
         <h2>Portfolio</h2>
-        <!-- Grid gallery missing - just basic layout -->
-        <img src="images/work1.jpg">
-        <img src="images/work2.jpg">
-        <img src="images/work3.jpg">
-    </div>
-    
-    <div class="bottom">
-        <p>Email: contact@mediaproduction.com</p>
-    </div>
+        <div class="portfolio">
+            <img src="images/work1.jpg" alt="Project 1">
+            <img src="images/work2.jpg" alt="Project 2">
+            <img src="images/work3.jpg" alt="Project 3">
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Email: contact@mediaproduction.com</p>
+</footer>
 </body>
 </html>
