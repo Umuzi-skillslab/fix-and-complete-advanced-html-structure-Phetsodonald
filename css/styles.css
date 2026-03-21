@@ -69,7 +69,7 @@ nav a:hover {
     background: url("../images/hero-image.jpg") center/cover no-repeat;
 }
 
-.hero-section article {
+.hero-section article, .about-team-section > article {
     height: 100%;
     width: 100%;
     background: var(--overlay);
@@ -82,12 +82,12 @@ nav a:hover {
     padding: 20px;
 }
 
-.hero-section h2 {
+.hero-section h2, .about-team-section h2 {
     font-size: 2.5rem;
     animation: fadeInDown 1s ease;
 }
 
-.hero-section p {
+.hero-section p, .about-team-section p {
     margin-top: 10px;
     opacity: 0.9;
     animation: fadeInUp 1.2s ease;
@@ -112,18 +112,18 @@ nav a:hover {
 }
 
 /* ================= CONTENT ================= */
-.content-section {
+.content-section, .services-section, .portfolio-section {
     padding: 40px 20px;
 }
 
-.content-section h2 {
+.content-section h2, .services-section > h2, .portfolio-section > h2 {
     color: var(--accent);
     margin-bottom: 20px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 /* ================= CARDS (GRID) ================= */
-.card-container {
+.card-container, .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--gap);
@@ -133,13 +133,29 @@ nav a:hover {
     background-color: var(--card);
     padding: 20px;
     border-radius: var(--radius);
-    transition: 0.3s;
+    transition: all 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px) scale(1.03);
     border: 1px solid var(--accent);
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* ================= CARDS (flex) ================= */
+.services-container{
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    padding: var(--padding);
+    gap: var(--gap);
+}
+
+/* ================= ABOUT TEAM SECTION ================= */
+.about-team-section {
+    height: 60vh;
+    background: url("../images/team-image.webp") center/cover no-repeat;
 }
 
 /* ================= FOOTER ================= */
