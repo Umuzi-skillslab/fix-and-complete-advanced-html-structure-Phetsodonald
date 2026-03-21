@@ -125,7 +125,7 @@ nav a:hover {
 /* ================= CARDS (GRID) ================= */
 .card-container, .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--gap);
 }
 
@@ -156,6 +156,39 @@ nav a:hover {
 .about-team-section {
     height: 60vh;
     background: url("../images/team-image.webp") center/cover no-repeat;
+}
+
+/* ================= PORTFOLIO SECTION ================= */
+.portfolio figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.portfolio img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.portfolio figure:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--overlay);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.portfolio figure:hover figcaption {
+    opacity: 1;
 }
 
 /* ================= FOOTER ================= */
