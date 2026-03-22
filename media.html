@@ -30,58 +30,61 @@
 
     <main>
 
-        <section>
+        <section class="video-showcase-section">
             <h2>Video Showcase</h2>
+            <div class="video-container">
+                <video width="640" height="360" controls>
+                    <source src="media/sample1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
 
-            <video width="640" height="360" controls>
-                <source src="media/sample1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-            <video width="640" height="360" controls>
-                <source src="media/sample2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+                <video width="640" height="360" controls>
+                    <source src="media/sample2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </section>
 
-        <section>
+        <section class="audio-section">
             <h2>Audio Sample</h2>
             <p>Listen to our audio production quality.</p>
 
             <audio controls>
-                <source src="media/sample-audio.mp3" type="audio/mpeg">
+                <source src="./media/alec_koff-blues-ballad-487408.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </section>
 
-        <section>
+        <section class="location-section">
             <h2>Location</h2>
             <p>Visit our studio at 123 Media Street</p>
-
-            <iframe 
+            <div class="map-container">
+                <iframe 
                 src="https://www.google.com/maps?q=pretoria&output=embed"
                 width="600" 
                 height="450" 
                 style="border:0;" 
                 allowfullscreen="" 
                 loading="lazy">
-            </iframe>
+                </iframe>
+            </div>
         </section>
 
         
-        <section>
+        <section class="testimonial-section">
             <h2>Client Testimonials</h2>
 
-            <figure>
-                <img src="images/client1.jpg" alt="Happy client testimonial">
-                <figcaption>Client 1: Amazing production quality!</figcaption>
-            </figure>
+            <div class="testimonials">
+                <figure>
+                    <img src="images/client1.jpg" alt="">
+                    <figcaption>Amazing service!</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/client2.jpg" alt="Satisfied client testimonial">
-                <figcaption>Client 2: Highly professional team.</figcaption>
-            </figure>
-
+                <figure>
+                    <img src="images/client2.jpg" alt="">
+                    <figcaption>Very professional</figcaption>
+                </figure>
+            </div>
         </section>
 
     </main>
