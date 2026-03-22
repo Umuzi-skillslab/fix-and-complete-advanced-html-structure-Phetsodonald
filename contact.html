@@ -11,92 +11,92 @@
 </head>
 <body>
 
-<header>
-    <h1>Media Production</h1>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
-    <nav aria-label="Main Navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>     
-    </nav>
-</header>
+    <header>
+        <h1>Media Production</h1>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>     
+        </nav>
+    </header>
 
-<main class="content-section">
-    <section>
-        <h2>Get In Touch</h2>
+    <main class="content-section">
+        <section>
+            <h2>Get In Touch</h2>
 
-        <form class="contact-form">
+            <form class="contact-form">
 
-            <fieldset>
-                <legend>Your Details</legend>
+                <fieldset>
+                    <legend>Your Details</legend>
 
-                <label for="name">Name</label>
-                <input id="name" type="text" placeholder="Your name" required>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="Your name" required>
 
-                <label for="email">Email</label>
-                <input id="email" type="email" placeholder="you@example.com" required>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="you@example.com" required>
 
-                <label for="phone">Phone</label>
-                <input id="phone" type="tel" placeholder="+27..." required>
-            </fieldset>
+                    <label for="phone">Phone</label>
+                    <input id="phone" type="tel" placeholder="+27..."  pattern="[0-9]{10}" required>
+                </fieldset>
 
-            <fieldset>
-                <legend>Service Needed</legend>
+                <fieldset>
+                    <legend>Service Needed</legend>
 
-                <label>
-                    <input type="radio" name="service" value="video" required>
-                    Video Production
-                </label>
+                    <label>
+                        <input type="radio" name="service" value="video" required>
+                        Video Production
+                    </label>
 
-                <label>
-                    <input type="radio" name="service" value="audio">
-                    Audio Production
-                </label>
+                    <label>
+                        <input type="radio" name="service" value="audio">
+                        Audio Production
+                    </label>
 
-                <label>
-                    <input type="radio" name="service" value="Photography">
-                   Photography
-                </label>
-            </fieldset>
+                    <label>
+                        <input type="radio" name="service" value="Photography">
+                    Photography
+                    </label>
+                </fieldset>
 
-            <fieldset>
-                <legend>Project Details</legend>
+                <fieldset>
+                    <legend>Project Details</legend>
 
-                <label for="budget">Budget (R)</label>
-                <input id="budget" type="number" min="0" placeholder="e.g. 5000">
+                    <label for="budget">Budget (R)</label>
+                    <input id="budget" type="number" min="0" placeholder="e.g. 5000" required>
 
-                <label for="date">Project Date</label>
-                <input id="date" type="date">
+                    <label for="date">Project Date</label>
+                    <input id="date" type="date" required>
 
-                <label for="location">Location</label>
-                <select id="location">
-                    <option>Pretoria</option>
-                    <option>Johannesburg</option>
-                    <option>Other</option>
-                </select>
+                    <label for="location">Location</label>
+                    <select id="location">
+                        <option>Pretoria</option>
+                        <option>Johannesburg</option>
+                        <option>Other</option>
+                    </select>
 
-                <label>
-                    <input type="checkbox">
-                    Urgent Request
-                </label>
+                    <label>
+                        <input type="checkbox">
+                        Urgent Request
+                    </label>
 
-                <label for="message">Message</label>
-                <textarea id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-            </fieldset>
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                </fieldset>
 
-            <button type="submit" class="cta-btn">Submit</button>
+                <button type="submit" class="cta-btn">Submit</button>
 
-        </form>
-    </section>
-</main>
+            </form>
+        </section>
+    </main>
 
-<footer class="bottom">
-    <p>Email: contact@mediaproduction.com</p>
-</footer>
+    <footer >
+        <p>Email: contact@mediaproduction.com</p>
+    </footer>
 
 </body>
 </html>
