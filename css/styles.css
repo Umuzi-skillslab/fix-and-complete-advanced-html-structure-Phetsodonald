@@ -216,6 +216,7 @@ nav a:hover {
 
 .video-container video {
     width: 100%;
+    height: 100%;
     border-radius: var(--radius);
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     transition: 0.3s;
