@@ -257,6 +257,11 @@ audio {
     border-radius: var(--radius);
     text-align: center;
     transition: 0.3s;
+
+    height: 280px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .testimonials figure:hover {
@@ -266,6 +271,8 @@ audio {
 
 .testimonials img {
     width: 100%;
+    height: 160px; 
+    object-fit: cover;
     border-radius: var(--radius);
 }
 
